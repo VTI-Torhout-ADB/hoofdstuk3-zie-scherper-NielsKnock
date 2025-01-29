@@ -1,10 +1,16 @@
-﻿namespace Dertien_in_een_dozijn
+﻿using System.Threading.Channels;
+
+namespace Dertien_in_een_dozijn
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            const int doosGrootte = 8;
+            int aantalEieren = 124;
+            int aantalDozen = aantalEieren / doosGrootte;
+            int rest = aantalEieren % doosGrootte;
+            Console.WriteLine($" {aantalEieren} eieren passen in {aantalDozen} dozen van doosgrootte:8. Daarbij zal je nog {rest} eieren over hebben.");
         }
     }
 }
